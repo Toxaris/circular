@@ -1,0 +1,32 @@
+Name:                circular
+Version:             0.1
+Synopsis:            A variant of lambda-star.
+-- Description:
+License:             BSD3
+License-file:        LICENSE
+Author:              Tillmann Rendel
+Maintainer:          rendel@informatik.uni-marburg.de
+-- Copyright:
+Category:            Language
+Build-type:          Simple
+-- Extra-source-files:
+Cabal-version:       >=1.2
+
+Executable circular
+  Main-is:             circular.hs
+  Build-depends:       base,
+                       unbound,
+                       partial-isomorphisms,
+                       invertible-syntax,
+                       mtl
+  -- Other-modules:
+  Hs-source-dirs:      src
+  -- Build-tools:
+
+Test-Suite tests
+  Type:                exitcode-stdio-1.0
+  Main-is:             tests.hs
+  Build-depends:       test-framework,
+                       test-framework-hunit,
+                       HUnit
+  Hs-source-dirs:      src
